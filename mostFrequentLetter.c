@@ -9,9 +9,9 @@ int main(void)
     int alphatab[26] = {0};
     int cpt = 0;
     int test = 0;
+    /*@ invariant 0<=i && i < taille; */
     for (int i = 0; i < taille; i++)
     {
-        /*@ invariant 0<=i && i < taille; */
         tab[i] = toupper(tab[i]);
         /*@ assert StrManip: tab[i] > 65; */
         alphatab[tab[i] - 65] += 1;
