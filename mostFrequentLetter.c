@@ -4,7 +4,7 @@
 
 int main(void)
 {
-    char tab[10001] = "Qui que quoi quand quid coq";
+    char tab[10001] = "Quiquequoiquandquidcoq";
     int taille = strlen(tab);
     int alphatab[26] = {0};
     int cpt = 0;
