@@ -11,6 +11,7 @@ int main(void)
     int test = 0;
     for (int i = 0; i < taille; i++)
     {
+        \*@ invariant 0<=i && i < taille; */
         tab[i] = toupper(tab[i]);
         /*@ assert StrManip: tab[i] > 65; */
         alphatab[tab[i] - 65] += 1;
