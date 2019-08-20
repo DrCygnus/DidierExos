@@ -4,7 +4,7 @@
 
 int main(void)
 {
-    char tab[10001] = "Quiquequoiquandquidcoq";
+    char tab[10001] = "Qui que quoi quand quid coq";
     int taille = strlen(tab);
     int alphatab[26] = {0};
     int cpt = 0;
@@ -14,7 +14,11 @@ int main(void)
         /*@ invariant 0<=i && i < taille; */
         tab[i] = toupper(tab[i]);
         /*@ assume StrManip: tab[i] > 65; */
+        if (tab[i] - 65 >= 0)
+        {
         alphatab[tab[i] - 65] += 1;
+        }
+        else {}
     }
     for (int j = 0; j < 26; j++)
     {
