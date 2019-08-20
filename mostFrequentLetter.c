@@ -12,7 +12,7 @@ int main(void)
     for (int i = 0; i < taille; i++)
     {
         tab[i] = toupper(tab[i]);
-        /*@ assert tab[i] > 65 */
+        /*@ assert StrManip: tab[i] > 65; */
         alphatab[tab[i] - 65] += 1;
     }
     for (int j = 0; j < 26; j++)
